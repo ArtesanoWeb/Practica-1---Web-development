@@ -1,0 +1,223 @@
+:root{
+    --primary:#2ECC71;
+    --dark:#0F2B24;
+    --dark-secondary:#1E4D3B;
+    --light:#F7F9F7;
+    --white:#FFFFFF;
+    --gray:#B7C0C8;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:#081814;
+}
+
+.login{
+    min-height:100vh;
+    display:flex;
+}
+
+/* COLUMNA IZQUIERDA */
+
+.login__banner{
+    flex:1;
+    position:relative;
+
+    background:
+    linear-gradient(
+        rgba(15,43,36,.85),
+        rgba(15,43,36,.85)
+    ),
+    url("../img/fronton.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:3rem;
+}
+
+.banner__content{
+    color:white;
+    max-width:500px;
+}
+
+.logo{
+    width:80px;
+    height:80px;
+
+    background:var(--primary);
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:2rem;
+    margin-bottom:1rem;
+}
+
+.banner__content h1{
+    font-size:3rem;
+    margin-bottom:1rem;
+}
+
+.banner__content p{
+    margin-bottom:2rem;
+    line-height:1.6;
+}
+
+.banner__content ul{
+    list-style:none;
+}
+
+.banner__content li{
+    margin-bottom:1rem;
+}
+
+/* COLUMNA DERECHA */
+
+.login__container{
+    flex:1;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:var(--light);
+
+    padding:2rem;
+}
+
+.login__form{
+    width:100%;
+    max-width:450px;
+
+    background:white;
+    padding:2.5rem;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.1);
+}
+
+.form__header{
+    text-align:center;
+    margin-bottom:2rem;
+}
+
+.form__logo{
+    width:70px;
+    height:70px;
+
+    margin:auto;
+    margin-bottom:1rem;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:1.8rem;
+}
+
+.form__header h2{
+    margin-bottom:.5rem;
+}
+
+.form__header p{
+    color:#666;
+}
+
+.form__header span{
+    color:#999;
+    font-size:.9rem;
+}
+
+.form__group{
+    display:flex;
+    flex-direction:column;
+    margin-bottom:1rem;
+}
+
+.form__group label{
+    margin-bottom:.5rem;
+    font-weight:600;
+}
+
+.form__group input{
+    padding:14px;
+
+    border:1px solid #ddd;
+    border-radius:10px;
+
+    outline:none;
+}
+
+.form__group input:focus{
+    border-color:var(--primary);
+}
+
+.form__options{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:1.5rem;
+}
+
+.form__options a{
+    color:var(--primary);
+    text-decoration:none;
+}
+
+button{
+    width:100%;
+
+    border:none;
+    border-radius:10px;
+
+    padding:14px;
+
+    background:var(--primary);
+    color:white;
+
+    font-size:1rem;
+    font-weight:600;
+
+    cursor:pointer;
+}
+
+button:hover{
+    opacity:.9;
+}
+
+
+@media(max-width:768px){
+
+    .login{
+        flex-direction:column;
+    }
+
+    .login__banner{
+        min-height:35vh;
+    }
+
+    .banner__content h1{
+        font-size:2rem;
+    }
+}
